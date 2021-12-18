@@ -170,9 +170,14 @@ def village_model_predict(img_path, model):
 
 
 @app.route('/', methods=['GET'])
-def home():
+def index():
     # Main page
-    return render_template('home.html')
+    return render_template('index.html')
+
+@app.route('/mhome', methods=['GET'])
+def mhome():
+    # Main page
+    return render_template('mhome.html')
 
 @app.route('/banana_model', methods=['GET'])
 def banana_index():
